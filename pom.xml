@@ -10,7 +10,7 @@
   <packaging>war</packaging>
   <version>1.0</version>
   <name>Maven Archetype for GWT</name>
-  
+
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -37,6 +37,7 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+    </dependencies>
   </dependencyManagement>
 
   <dependencies>
@@ -61,7 +62,7 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -87,7 +88,8 @@
 
   <build>
     <!-- Output classes directly into the webapp, so that IDEs and "mvn process-classes" update them in DevMode -->
-    <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
+    <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes
+    </outputDirectory>
 
     <plugins>
 
@@ -114,7 +116,7 @@
           </modules>
         </configuration>
       </plugin>
-      
+
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
